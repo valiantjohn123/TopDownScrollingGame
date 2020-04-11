@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,20 +9,21 @@ using UnityEngine;
 public abstract class MovementNodeBase : ScriptableObject
 {
     public MovementNodeBase NextNode;
-    public Entity ParentEntity;
-
-    public Vector2 TargetPoint;
-
     public AnimationCurve EasingCurve;
-
+    
     public float Speed = 1;
-    public float Step;
     public float Delay;
 
+    [NonSerialized]
+    public Vector2 TargetPoint;
+    [NonSerialized]
+    public Entity ParentEntity;
+    [NonSerialized]
+    public float Step;
+    [NonSerialized]
     public bool IsElementSetupComplete;
-
+    [NonSerialized]
     private float currentDelay;
-
 
     /// <summary>
     /// On step update
@@ -65,8 +67,9 @@ public abstract class MovementNodeBase : ScriptableObject
         if (Step >= 1)
         {
             if (NextNode != null)
-                NextNode.ResetNode();
-            return NextNode;
+            {
+                return NextNode.ResetNode();
+            }
         }
 
         OnStep(EasingCurve.Evaluate(Step));
@@ -103,10 +106,11 @@ public abstract class MovementNodeBase : ScriptableObject
     /// <summary>
     /// Reset the node to initial state
     /// </summary>
-    public void ResetNode()
+    public MovementNodeBase ResetNode()
     {
         currentDelay = 0;
         Step = 0;
         IsElementSetupComplete = false;
+        return Instantiate(this);
     }
 }

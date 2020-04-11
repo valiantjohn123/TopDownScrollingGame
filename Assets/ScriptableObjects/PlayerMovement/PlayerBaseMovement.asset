@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: PlayerBaseMovement
   m_EditorClassIdentifier: 
   NextNode: {fileID: 11400000}
-  ParentEntity: {fileID: 0}
-  TargetPoint: {x: -1.3654329, y: -1.7223723}
   EasingCurve:
     serializedVersion: 2
     m_Curve: []
@@ -22,7 +20,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   Speed: 5
-  Step: 0.2833385
   Delay: 0
-  IsElementSetupComplete: 1
   positionOffset: {x: 0.25, y: 0.25}

@@ -2,17 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Object spawn handler
+/// </summary>
 public class ObjectSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Helper objects
+    public enum EnemySpawnPoints
     {
-        
+        Point1, Point2, Point3, Point4, Point5
     }
 
-    // Update is called once per frame
-    void Update()
+    [System.Serializable]
+    public class EnemySpawnPointObjects
     {
-        
+        public EnemySpawnPoints Point;
+        public Transform PointObject;
+    }
+    #endregion
+
+    [SerializeField]
+    private Transform playerSpawnPoint;
+
+    [SerializeField]
+    private List<EnemySpawnPointObjects> enemySpawnPoints;
+
+    /// <summary>
+    /// Spawn player
+    /// </summary>
+    /// <param name="playerObject"></param>
+    public void SpawnPlayer(GameObject playerObject)
+    {
+        Instantiate(playerObject, playerSpawnPoint.position, playerSpawnPoint.rotation);
+    }
+
+    /// <summary>
+    /// Spawn enemies
+    /// </summary>
+    /// <param name="enemyObject"></param>
+    /// <param name="point"></param>
+    public void SpawnEnemy(GameObject enemyObject, EnemySpawnPoints point)
+    {
+        EnemySpawnPointObjects spawnPoint = enemySpawnPoints.Find(pt => pt.Point == point);
+        if (spawnPoint != null)
+        {
+            Instantiate(enemyObject, spawnPoint.PointObject.position, spawnPoint.PointObject.rotation);
+        }
     }
 }

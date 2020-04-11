@@ -23,18 +23,31 @@ public class ComponentHolder : MonoBehaviour
     }
     public Camera MainCamera 
     {
-        get 
+        get; 
+        private set; 
+    }
+    public WeaponsController WeaponsController
+    {
+        get
         {
-            return mainCamera;
+            return weaponsController;
         }
     }
 
     [SerializeField]
     private Entity objectEntity;
     [SerializeField]
-    private Camera mainCamera;
-    [SerializeField]
     private MovementController movementController;
+    [SerializeField]
+    private WeaponsController weaponsController;
+
+    /// <summary>
+    /// Mono awake
+    /// </summary>
+    private void Awake()
+    {
+        MainCamera = Camera.main;
+    }
 
     /// <summary>
     /// Get the holder

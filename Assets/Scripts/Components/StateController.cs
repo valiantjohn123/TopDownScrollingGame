@@ -9,12 +9,12 @@ public class StateController : MonoBehaviour
         NullState, Menu, Game, GameWin, GameFailed
     }
 
-    public static Dictionary<States, State> AvailableStates 
+    public Dictionary<States, State> AvailableStates 
     {
         get;
         private set;
     }
-    public static State CurrentState;
+    public State CurrentState;
 
     [SerializeField]
     private States defaultState;
@@ -48,7 +48,7 @@ public class StateController : MonoBehaviour
     /// </summary>
     /// <param name="stateID"></param>
     /// <param name="setBackState"></param>
-    public static void ChangeState(States stateID, bool setBackState = false)
+    public void ChangeState(States stateID, bool setBackState = false)
     {
         if (!AvailableStates.ContainsKey(stateID))
         {
@@ -66,7 +66,7 @@ public class StateController : MonoBehaviour
     /// <summary>
     /// Close current state
     /// </summary>
-    public static void CloseState()
+    public void CloseState()
     {
         if (CurrentState != null && CurrentState.BackID != States.NullState)
         {

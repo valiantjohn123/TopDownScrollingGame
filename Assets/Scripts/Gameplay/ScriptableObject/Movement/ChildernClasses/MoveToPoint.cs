@@ -27,6 +27,6 @@ public class MoveToPoint : MovementNodeBase
     public override void OnStep(float step)
     {
         if (ParentEntity != null)
-            ParentEntity.transform.position = ScreenPositionClamp.GetClampedPosition(Vector2.Lerp(ParentEntity.transform.position, TargetPoint, GetDeltaTime()), positionOffset);
+            ParentEntity.transform.position = ScreenPositionUtility.GetClampedPosition(Vector2.Lerp(ParentEntity.transform.position, TargetPoint, GetDeltaTime()), positionOffset);
     }
 }

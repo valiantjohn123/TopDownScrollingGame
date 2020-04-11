@@ -19,6 +19,6 @@ public class MenuState : State
     /// </summary>
     public void PlayGame()
     {
-        StateController.ChangeState(StateController.States.Game);
+        DependencyHolder.MainStateController.ChangeState(StateController.States.Game);
     }
 }

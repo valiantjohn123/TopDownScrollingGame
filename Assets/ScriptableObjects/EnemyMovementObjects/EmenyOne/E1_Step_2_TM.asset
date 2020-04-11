@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8f2183fa49afec4297a15603395d49b, type: 3}
-  m_Name: E1_Step_3_TM
+  m_Name: E1_Step_2_TM
   m_EditorClassIdentifier: 
   NextNode: {fileID: 11400000}
-  ParentEntity: {fileID: 0}
-  TargetPoint: {x: 0, y: 0}
   EasingCurve:
     serializedVersion: 2
     m_Curve:
@@ -40,7 +38,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   Speed: 0.1
-  Step: 0.11656515
   Delay: 0.2
-  IsElementSetupComplete: 1
-  TowardsPoint: {x: 0, y: 10}
+  TowardsPoint: {x: 0, y: -10}

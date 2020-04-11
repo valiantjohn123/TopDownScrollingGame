@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ccee38344da8344eba4bccde8bd6c7c, type: 3}
+  m_Name: LevelData_1
+  m_EditorClassIdentifier: 
+  LevelSpawnList:
+  - IsSpawned: 1
+    InTime: 1
+    Type: 0
+    SpawnPoint: 0
+  - IsSpawned: 1
+    InTime: 1
+    Type: 0
+    SpawnPoint: 1
+  - IsSpawned: 1
+    InTime: 1
+    Type: 0
+    SpawnPoint: 2
+  - IsSpawned: 1
+    InTime: 1
+    Type: 0
+    SpawnPoint: 3
+  - IsSpawned: 1
+    InTime: 1
+    Type: 0
+    SpawnPoint: 4
+  - IsSpawned: 0
+    InTime: 4
+    Type: 0
+    SpawnPoint: 0
+  - IsSpawned: 0
+    InTime: 4
+    Type: 0
+    SpawnPoint: 2
+  - IsSpawned: 0
+    InTime: 4
+    Type: 0
+    SpawnPoint: 4

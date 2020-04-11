@@ -26,6 +26,14 @@ public class EnemyEntity : Entity
     /// </summary>
     public override void OnDeath()
     {
+        Destroy(gameObject);
+    }
+
+    /// <summary>
+    /// On mono destroyed
+    /// </summary>
+    private void OnDestroy()
+    {
         DependencyHolder.Enemies.Remove(this);
     }
 }

@@ -22,7 +22,7 @@ public class MovementController : MonoBehaviour
     private void Awake()
     {
         compHolder = ComponentHolder.GetHolder(gameObject);
-        node.ResetNode();
+        node = node.ResetNode();
     }
 
     /// <summary>
@@ -31,6 +31,8 @@ public class MovementController : MonoBehaviour
     private void Update()
     {
         if (node != null && compHolder != null)
+        {
             node = node.Execute(compHolder.ObjectEntity);
+        }
     }
 }

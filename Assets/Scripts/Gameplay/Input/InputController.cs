@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Basic input controller
@@ -14,12 +16,15 @@ public class InputController : MonoBehaviour
     private Vector2 initMousePoint;
     private Vector2 initPlayerPoint;
 
+    public static Action<int> SpecialWeaponFire;
+
     /// <summary>
     /// Mono object awake
     /// </summary>
     private void Awake()
     {
         holder = ComponentHolder.GetHolder(gameObject);
+        SpecialWeaponFire += FireSpecialWeapons;
     }
 
     /// <summary>
@@ -34,6 +39,12 @@ public class InputController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
+            //Control primary weapon
+            if (initCompleted && holder.WeaponsController != null)
+            {
+                holder.WeaponsController.FirePrimaryWeapons();
+            }
+            //Control movement
             if (holder.MovementController != null)
             {
                 if (!initCompleted)
@@ -47,6 +58,26 @@ public class InputController : MonoBehaviour
 
                 holder.MovementController.Node.UpdateTarget(GetRelativePoint()).Execute(holder.ObjectEntity);
             }
+        }
+    }
+
+    /// <summary>
+    /// Mono on destroy
+    /// </summary>
+    private void OnDestroy()
+    {
+        SpecialWeaponFire -= FireSpecialWeapons;
+    }
+
+    /// <summary>
+    /// Fire the special weapons
+    /// </summary>
+    /// <param name="index"></param>
+    private void FireSpecialWeapons(int index)
+    {
+        if (initCompleted && holder.WeaponsController != null)
+        {
+            holder.WeaponsController.FireSpecialWeapon(index);
         }
     }
 
