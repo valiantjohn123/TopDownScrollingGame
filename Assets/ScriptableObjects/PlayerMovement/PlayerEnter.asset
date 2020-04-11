@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8f2183fa49afec4297a15603395d49b, type: 3}
-  m_Name: E1_Step_1_TM
+  m_Name: PlayerEnter
   m_EditorClassIdentifier: 
-  NextNode: {fileID: 11400000, guid: b665cee383b124e4382d87595e5259a5, type: 2}
+  NextNode: {fileID: 11400000, guid: cc396535925a7a241a8924fa197ef475, type: 2}
   ParentEntity: {fileID: 0}
-  TargetPoint: {x: 0, y: 0}
+  TargetPoint: {x: 1.5038315, y: -1.340996}
   EasingCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.03183962
-      outSlope: 0.03183962
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.6666667
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
@@ -40,7 +40,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   Speed: 1
-  Step: 1.0084509
+  Step: 1.0057179
   Delay: 0
   IsElementSetupComplete: 1
-  TowardsPoint: {x: 0, y: 1}
+  TowardsPoint: {x: 0, y: 2}

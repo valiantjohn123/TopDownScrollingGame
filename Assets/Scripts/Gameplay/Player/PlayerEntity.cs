@@ -3,15 +3,14 @@
 /// <summary>
 /// Player entity
 /// </summary>
-public class EnemyEntity : Entity
+public class PlayerEntity : Entity
 {
     /// <summary>
     /// Mono object awake
     /// </summary>
     private void Awake()
     {
-        if (!EntityHolder.Enemies.Contains(this))
-            EntityHolder.Enemies.Add(this);
+        DependencyHolder.PlayerEntity = this;
     }
 
     /// <summary>
@@ -19,6 +18,6 @@ public class EnemyEntity : Entity
     /// </summary>
     public override void OnDeath()
     {
-        EntityHolder.Enemies.Remove(this);
+        DependencyHolder.PlayerEntity = null;
     }
 }

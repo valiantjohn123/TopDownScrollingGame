@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EntityHolder
+/// <summary>
+/// Holds public references
+/// </summary>
+public abstract class DependencyHolder
 {
     public static Entity PlayerEntity { get; set; }
     public static List<Entity> Enemies = new List<Entity>();
+    public static StateController MainStateController;
 }

@@ -14,8 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextNode: {fileID: 11400000}
   ParentEntity: {fileID: 0}
+  TargetPoint: {x: -1.3654329, y: -1.7223723}
+  EasingCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   Speed: 5
-  Step: 0.9506276
+  Step: 0.2833385
   Delay: 0
   IsElementSetupComplete: 1
-  TargetPoint: {x: -2.7063339, y: -0.412668}
+  positionOffset: {x: 0.25, y: 0.25}

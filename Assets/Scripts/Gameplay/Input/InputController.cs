@@ -9,6 +9,8 @@ public class InputController : MonoBehaviour
 {
     private ComponentHolder holder;
 
+    private bool initCompleted;
+
     private Vector2 initMousePoint;
     private Vector2 initPlayerPoint;
 
@@ -25,19 +27,36 @@ public class InputController : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (initCompleted && Input.GetMouseButtonDown(0))
         {
-            initMousePoint = GetPoint();
-            initPlayerPoint = holder.ObjectEntity.transform.position;
+            SetInitData();
         }
 
         if (Input.GetMouseButton(0))
         {
             if (holder.MovementController != null)
             {
+                if (!initCompleted)
+                {
+                    if (holder.MovementController.Node.GetType() == typeof(MoveToPoint))
+                    {
+                        SetInitData();
+                        initCompleted = true;
+                    }
+                }
+
                 holder.MovementController.Node.UpdateTarget(GetRelativePoint()).Execute(holder.ObjectEntity);
             }
         }
+    }
+
+    /// <summary>
+    /// To set the init data
+    /// </summary>
+    private void SetInitData()
+    {
+        initMousePoint = GetPoint();
+        initPlayerPoint = holder.ObjectEntity.transform.position;
     }
 
     /// <summary>
