@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
+    public MovementNodeBase Node
+    {
+        get 
+        {
+            return node;
+        }
+    }
+
     [SerializeField]
     private MovementNodeBase node;
-
     private ComponentHolder compHolder;
 
+    /// <summary>
+    /// Mono object awake
+    /// </summary>
     private void Awake()
     {
-        compHolder = GetComponent<ComponentHolder>();
-        if (compHolder == null)
-            Destroy(gameObject);
-
+        compHolder = ComponentHolder.GetHolder(gameObject);
         node.ResetNode();
     }
 
+    /// <summary>
+    /// Mono object update
+    /// </summary>
     private void Update()
     {
         if (node != null && compHolder != null)

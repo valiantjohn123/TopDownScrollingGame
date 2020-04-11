@@ -8,13 +8,20 @@ using UnityEngine;
 public abstract class MovementNodeBase : ScriptableObject
 {
     public MovementNodeBase NextNode;
-
-    public float Speed = 1;
-
-    public bool IsElementSetupComplete;
     public Entity ParentEntity;
 
+    public Vector2 TargetPoint;
+
+    public AnimationCurve EasingCurve;
+
+    public float Speed = 1;
     public float Step;
+    public float Delay;
+
+    public bool IsElementSetupComplete;
+
+    private float currentDelay;
+
 
     /// <summary>
     /// On step update
@@ -29,11 +36,30 @@ public abstract class MovementNodeBase : ScriptableObject
     public abstract void OnSetUp();
 
     /// <summary>
+    /// Update the target vector
+    /// </summary>
+    /// <param name="vector"></param>
+    /// <returns></returns>
+    public MovementNodeBase UpdateTarget(Vector2 vector)
+    {
+        TargetPoint = vector;
+        return this;
+    }
+
+    /// <summary>
     /// On movement execute
     /// </summary>
     public MovementNodeBase Execute(Entity entity)
     {
+        //Set up object
         SetUp(entity);
+
+        //Add listtle delay before starting
+        if (currentDelay <= Delay)
+        {
+            currentDelay += Time.deltaTime;
+            return this;
+        }
 
         //Go to next node once this node is completed
         if (Step >= 1)
@@ -43,9 +69,20 @@ public abstract class MovementNodeBase : ScriptableObject
             return NextNode;
         }
 
-        OnStep(Step);
+        OnStep(EasingCurve.Evaluate(Step));
         Step += Time.deltaTime * Speed;
+
+        //Return the object
         return this;
+    }
+
+    /// <summary>
+    /// Gets the delta time calculated with speed
+    /// </summary>
+    /// <returns></returns>
+    public float GetDeltaTime()
+    {
+        return Time.deltaTime * Speed;
     }
 
     /// <summary>
@@ -68,6 +105,7 @@ public abstract class MovementNodeBase : ScriptableObject
     /// </summary>
     public void ResetNode()
     {
+        currentDelay = 0;
         Step = 0;
         IsElementSetupComplete = false;
     }

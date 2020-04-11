@@ -25,7 +25,8 @@ public class TowardsNode : MovementNodeBase
     /// </summary>
     public override void OnSetUp()
     {
-        initPos = ParentEntity.transform.position;
+        if (ParentEntity != null)
+            initPos = ParentEntity.transform.position;
     }
 
     /// <summary>

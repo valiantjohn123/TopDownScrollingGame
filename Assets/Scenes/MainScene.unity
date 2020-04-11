@@ -133,6 +133,8 @@ GameObject:
   - component: {fileID: 411676502}
   - component: {fileID: 411676504}
   - component: {fileID: 411676501}
+  - component: {fileID: 411676506}
+  - component: {fileID: 411676505}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -153,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
-  Health: 0
+  Health: 10
   CanTakeDamage: 0
 --- !u!212 &411676502
 SpriteRenderer:
@@ -231,7 +233,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7059be4950e4a0d4f9710fd95b74db12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectEntity: {fileID: 411676501}
+  objectEntity: {fileID: 411676501}
+  mainCamera: {fileID: 519420031}
+  movementController: {fileID: 411676506}
+--- !u!114 &411676505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411676500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2272af64f84f77941a9f9ec75664abac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &411676506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411676500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8dc8719ef5e034faad7a5c18904704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  node: {fileID: 11400000, guid: cc396535925a7a241a8924fa197ef475, type: 2}
+  compHolder: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8dc8719ef5e034faad7a5c18904704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  node: {fileID: 11400000, guid: ac72c7550c80d5c41993e460d832737b, type: 2}
+  node: {fileID: 11400000, guid: e1282b88c0509214392ffc77beabc114, type: 2}
+  compHolder: {fileID: 0}
 --- !u!114 &2044218679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +406,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7059be4950e4a0d4f9710fd95b74db12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectEntity: {fileID: 2044218679}
+  objectEntity: {fileID: 2044218679}
+  mainCamera: {fileID: 519420031}
+  movementController: {fileID: 2044218678}
 --- !u!212 &2044218681
 SpriteRenderer:
   m_ObjectHideFlags: 0

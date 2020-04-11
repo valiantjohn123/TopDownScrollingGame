@@ -26,6 +26,7 @@ public class TowardsThreePointNode : MovementNodeBase
     /// </summary>
     public override void OnSetUp()
     {
+        if(ParentEntity != null)
         initPos = ParentEntity.transform.position;
         midPoint = new Vector2(initPos.x, targetPoint.y);
     }
