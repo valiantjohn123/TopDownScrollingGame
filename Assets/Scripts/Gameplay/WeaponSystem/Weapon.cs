@@ -15,6 +15,13 @@ public class Weapon : MonoBehaviour
             return details;
         }
     }
+    public float FireTime 
+    {
+        get
+        {
+            return fireTime;
+        }
+    }
 
     [SerializeField]
     private WeaponDetails details;
@@ -27,6 +34,8 @@ public class Weapon : MonoBehaviour
         private set;
     }
 
+    private float fireTime;
+
     /// <summary>
     /// Fire the weapon
     /// </summary>
@@ -34,8 +43,26 @@ public class Weapon : MonoBehaviour
     {
         if (nozzle != null)
         {
-            BaseBullet obj = Instantiate(details.BulletPrefab, nozzle.position, nozzle.rotation);
-            obj.SetUp(details.Damage, entityType);
+            BaseBullet obj = Instantiate(Details.BulletPrefab, nozzle.position, nozzle.rotation);
+            obj.SetUp(Details.Damage, entityType);
         }
+    }
+
+    /// <summary>
+    /// To check weapon ready shoot or update
+    /// </summary>
+    /// <returns></returns>
+    public bool WeaponUpdate()
+    {
+        bool shoot = false;
+
+        if (fireTime >= 1)
+        {
+            shoot = true;
+            fireTime = 0;
+        }
+
+        fireTime += Time.deltaTime * Details.RateOfFire;
+        return shoot;
     }
 }

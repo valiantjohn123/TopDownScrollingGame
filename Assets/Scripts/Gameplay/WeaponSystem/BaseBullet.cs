@@ -35,6 +35,7 @@ public abstract class BaseBullet : MonoBehaviour
         if (entity != null && entity.Type != Type)
         {
             entity.TakeDamage(Damage);
+            Destroy(gameObject);
         }
     }
 }

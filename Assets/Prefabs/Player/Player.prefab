@@ -40,7 +40,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7598674764566137504}
   - component: {fileID: 7598674764566137505}
-  - component: {fileID: 8561002042131770715}
+  - component: {fileID: 2669035981614651457}
+  - component: {fileID: 8306793870591636804}
   - component: {fileID: 7598674764566137519}
   - component: {fileID: 7598674764566137506}
   - component: {fileID: 7598674764566137517}
@@ -119,8 +120,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &8561002042131770715
-EdgeCollider2D:
+--- !u!50 &2669035981614651457
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598674764566137507}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &8306793870591636804
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -133,12 +155,21 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.68, y: 2.32}
+    newSize: {x: 2.68, y: 2.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: 1.3414435, y: -1.1585592}
-  - {x: -1.3365175, y: -1.1414733}
-  - {x: 0.008431325, y: 1.1571875}
-  - {x: 1.3399998, y: -1.1439855}
+    m_Paths:
+    - - {x: 1.25, y: -0.95}
+      - {x: 1.346144, y: -1.1570786}
+      - {x: -1.3462473, y: -1.1634816}
+      - {x: 0.00846304, y: 1.1480821}
 --- !u!114 &7598674764566137519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Health: 10
-  CanTakeDamage: 0
+  CanTakeDamage: 1
 --- !u!114 &7598674764566137517
 MonoBehaviour:
   m_ObjectHideFlags: 0

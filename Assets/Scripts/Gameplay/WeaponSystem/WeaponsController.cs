@@ -29,7 +29,7 @@ public class WeaponsController : MonoBehaviour
         for (int i = 0; i < primaryWeapons.Count; i++)
         {
             var weapon = primaryWeapons[i];
-            if (weapon.Details.WeaponUpdate())
+            if (weapon.WeaponUpdate())
             {
                 weapon.Fire(holder.ObjectEntity.Type);
             }
@@ -42,7 +42,7 @@ public class WeaponsController : MonoBehaviour
     public void FireSpecialWeapon(int index)
     {
         var weapon = primaryWeapons[index];
-        if (weapon.Details.WeaponUpdate())
+        if (weapon.WeaponUpdate())
         {
             weapon.Fire(holder.ObjectEntity.Type);
         }
@@ -55,8 +55,8 @@ public class WeaponsController : MonoBehaviour
     {
         for (int i = 0; i < specialWeapons.Count; i++)
         {
-            specialWeapons[i].Details.WeaponUpdate();
-            WeaponUpdated?.Invoke(i, specialWeapons[i].Details.FireTime);
+            specialWeapons[i].WeaponUpdate();
+            WeaponUpdated?.Invoke(i, specialWeapons[i].FireTime);
         }
     }
 }

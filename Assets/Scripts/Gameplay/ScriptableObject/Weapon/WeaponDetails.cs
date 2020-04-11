@@ -17,26 +17,4 @@ public class WeaponDetails : ScriptableObject
     public BaseBullet BulletPrefab;
     public float RateOfFire;
     public float Damage;
-
-    [System.NonSerialized]
-    public float FireTime;
-
-    /// <summary>
-    /// To check weapon ready shoot or update
-    /// </summary>
-    /// <returns></returns>
-    public bool WeaponUpdate()
-    {
-        bool shoot = false;
-
-        if (FireTime >= 1)
-        {
-            shoot = true;
-            FireTime = 0;
-        }
-
-        FireTime += Time.deltaTime * RateOfFire;
-
-        return shoot;
-    }
 }
