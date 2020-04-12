@@ -16,6 +16,13 @@ public abstract class Entity : MonoBehaviour
     public bool CanTakeDamage;
 
     /// <summary>
+    /// Trigger to indicate health changed
+    /// </summary>
+    public Action<float> HealthUpdated;
+
+    private float totalHealth = -1;
+
+    /// <summary>
     /// On death trigger
     /// </summary>
     public abstract void OnDeath();
@@ -27,7 +34,15 @@ public abstract class Entity : MonoBehaviour
     public bool TakeDamage(float damage)
     {
         if (CanTakeDamage)
+        {
+            if (totalHealth < 0)
+            {
+                totalHealth = Health;
+            }
             Health -= damage;
+
+            HealthUpdated?.Invoke(Health / totalHealth);
+        }
 
         if (Health <= 0)
         {

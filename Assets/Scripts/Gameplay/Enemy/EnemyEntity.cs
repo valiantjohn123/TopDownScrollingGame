@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// Player entity
@@ -11,6 +12,9 @@ public class EnemyEntity : Entity
     }
 
     public EnemyType EnemyTypeEnum;
+
+    [SerializeField]
+    private int score = 1;
 
     /// <summary>
     /// Mono object awake
@@ -26,6 +30,7 @@ public class EnemyEntity : Entity
     /// </summary>
     public override void OnDeath()
     {
+        Global.CurrentGame.Score += score;
         Destroy(gameObject);
     }
 
