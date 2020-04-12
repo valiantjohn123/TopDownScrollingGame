@@ -16,9 +16,6 @@ public class EnemySpawnController : SpawnController
     [SerializeField]
     private List<EnemySpawnStashElement> enemyStash;
 
-    [SerializeField]
-    private LevelDataBase levelData;
-
     private int secondsCount;
     private float timer;
 
@@ -60,11 +57,11 @@ public class EnemySpawnController : SpawnController
     /// </summary>
     private void CheckSpawnValidity()
     {
-        if (levelData != null)
+        if (Global.CurrentGame.LevelData != null)
         {
-            for (int i = 0; i < levelData.LevelSpawnList.Count; i++)
+            for (int i = 0; i < Global.CurrentGame.LevelData.LevelSpawnList.Count; i++)
             {
-                LevelDataBase.EnemySpawnDetails data = levelData.LevelSpawnList[i];
+                LevelDataBase.EnemySpawnDetails data = Global.CurrentGame.LevelData.LevelSpawnList[i];
                 if (data.InTime <= secondsCount && !data.IsSpawned)
                 {
                     EnemySpawnStashElement enemy = enemyStash.Find(en => en.Type == data.Type);

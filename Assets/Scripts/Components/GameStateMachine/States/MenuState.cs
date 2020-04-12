@@ -1,12 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuState : State
 {
+    [SerializeField]
+    private Text totalScoreTextBox;
+
+    [SerializeField]
+    private LevelUIController levelUIController;
+
     public override void OnEnter()
     {
-        
+        Global.CurrentGame.Reset();
+        totalScoreTextBox.text = "Score: "+ Global.TotalScore.ToString();
+        levelUIController.SetLevelData();
     }
 
     public override void OnExit()

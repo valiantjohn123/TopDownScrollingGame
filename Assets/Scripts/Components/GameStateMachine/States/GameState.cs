@@ -12,7 +12,6 @@ public class GameState : State
     /// </summary>
     public override void OnEnter()
     {
-        Global.CurrentGame.Reset();
         spawnControllers.ForEach(sp => sp.InitOperation());
     }
 

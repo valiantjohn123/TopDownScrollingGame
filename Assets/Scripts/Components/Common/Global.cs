@@ -25,6 +25,20 @@ public class Global
         }
         private static int score;
 
+        public static LevelDataBase LevelData 
+        {
+            get 
+            {
+                if (levelData == null)
+                    levelData = Resources.Load<LevelDataBase>("LevelData/LevelData_" + CurrentLevel.ToString());
+                return levelData; 
+            } 
+            set => levelData = value; 
+        }
+        private static LevelDataBase levelData;
+
+        public static int CurrentLevel;
+
         /// <summary>
         /// Save data
         /// </summary>
@@ -38,6 +52,8 @@ public class Global
         /// </summary>
         public static void Reset()
         {
+            LevelData = null;
+            CurrentLevel = 0;
             Score = 0;
         }
     }
@@ -54,6 +70,21 @@ public class Global
         set
         {
             PlayerPrefs.SetInt("Scrte", value);
+        }
+    }
+
+    /// <summary>
+    /// Total score that is saved
+    /// </summary>
+    public static int LastUnlockedLevel
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("ckedLevel", 1);
+        }
+        set
+        {
+            PlayerPrefs.SetInt("ckedLevel", value);
         }
     }
 }
