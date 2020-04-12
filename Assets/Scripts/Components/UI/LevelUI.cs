@@ -37,7 +37,6 @@ public class LevelUI : MonoBehaviour
     /// <param name="value"></param>
     public void OnToggleClicked(bool value)
     {
-        Debug.LogError("Toafadsd " + value +" : "  + index);
         if(value)
             Global.CurrentGame.CurrentLevel = index;
     }
