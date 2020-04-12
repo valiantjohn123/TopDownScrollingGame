@@ -15,6 +15,7 @@ public class WeaponDetails : ScriptableObject
 
     public BulletType SuitedBullet;
     public BaseBullet BulletPrefab;
+    public float BulletSpeed;
     public float RateOfFire;
     public float Damage;
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseBullet : MonoBehaviour
+public abstract class BaseBullet : MonoBehaviour, ICollisionListner
 {
     public float Range;
     public float Speed;
@@ -17,25 +17,43 @@ public abstract class BaseBullet : MonoBehaviour
     /// </summary>
     /// <param name="dmg"></param>
     /// <param name="type"></param>
-    public void SetUp(float dmg, Entity.EntityType type)
+    public void SetUp(float dmg, float speed, Entity.EntityType type)
     {
         Type = type;
         Damage = dmg;
+        Speed = speed;
         Direction = transform.up;
         Position = transform.position;
     }
 
+    ///// <summary>
+    ///// Mono on trigger enter
+    ///// </summary>
+    ///// <param name="other"></param>
+    //public void OnTrigger(Collider2D other)
+    //{
+    //    var entity = other.gameObject.GetComponent<Entity>();
+    //    if (entity != null && entity.Type != Type)
+    //    {
+    //        if (entity.TakeDamage(Damage))
+    //        {
+    //            Destroy(gameObject);
+    //        }
+    //    }
+    //}
+
     /// <summary>
-    /// Mono on trigger enter
+    /// On collision trigger
     /// </summary>
-    /// <param name="other"></param>
-    public void OnTrigger(Collider2D other)
+    /// <param name="entity"></param>
+    public void OnCollision(Entity entity)
     {
-        var entity = other.gameObject.GetComponent<Entity>();
         if (entity != null && entity.Type != Type)
         {
-            entity.TakeDamage(Damage);
-            Destroy(gameObject);
+            if (entity.TakeDamage(Damage))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -15,5 +15,6 @@ MonoBehaviour:
   SuitedBullet: 0
   BulletPrefab: {fileID: 452141808639585775, guid: ebc6d048e4efde3439ecc59dbc0bb0a7,
     type: 3}
+  BulletSpeed: 0.5
   RateOfFire: 5
   Damage: 1

@@ -19,6 +19,8 @@ GameObject:
   - component: {fileID: 2693163161993926403}
   - component: {fileID: 6724790007411053196}
   - component: {fileID: 742450910524643464}
+  - component: {fileID: 154866564875102314}
+  - component: {fileID: 9205653087881474249}
   m_Layer: 0
   m_Name: EnemySmallOne
   m_TagString: Untagged
@@ -35,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 252223556033935723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 7690713544273949106}
   m_Father: {fileID: 0}
@@ -110,7 +112,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!60 &2278663978115979531
 PolygonCollider2D:
@@ -137,8 +139,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.3640053, y: -1.1704098}
+    - - {x: 1.3045104, y: 0.4738807}
+      - {x: 1.3640053, y: -1.1704098}
       - {x: -1.3693359, y: -1.1712849}
+      - {x: -1.3662316, y: 0.5351863}
       - {x: -0.0040561953, y: 1.1704952}
 --- !u!114 &252223556033935718
 MonoBehaviour:
@@ -155,6 +159,7 @@ MonoBehaviour:
   objectEntity: {fileID: 252223556033935721}
   movementController: {fileID: 252223556033935720}
   weaponsController: {fileID: 6724790007411053196}
+  collisionListner: {fileID: 252223556033935723}
 --- !u!114 &252223556033935721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +243,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   details: {fileID: 11400000, guid: 3289f5996e78f5848bb906b9e76d00bd, type: 2}
   nozzle: {fileID: 7690713544273949106}
+--- !u!114 &154866564875102314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252223556033935723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7267aaea07c90e6428b9e5c20538fdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9205653087881474249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252223556033935723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b185c311294cbcf47a522e15c353de46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
 --- !u!1 &8180262357217912624
 GameObject:
   m_ObjectHideFlags: 0

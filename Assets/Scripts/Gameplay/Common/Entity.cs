@@ -12,6 +12,7 @@ public abstract class Entity : MonoBehaviour
 
     public EntityType Type;
     public float Health;
+    public float CollisionDamage;
     public bool CanTakeDamage;
 
     /// <summary>
@@ -23,7 +24,7 @@ public abstract class Entity : MonoBehaviour
     /// Take damage metho
     /// </summary>
     /// <param name="damage"></param>
-    public void TakeDamage(float damage)
+    public bool TakeDamage(float damage)
     {
         if (CanTakeDamage)
             Health -= damage;
@@ -32,5 +33,7 @@ public abstract class Entity : MonoBehaviour
         {
             OnDeath();
         }
+
+        return CanTakeDamage;
     }
 }

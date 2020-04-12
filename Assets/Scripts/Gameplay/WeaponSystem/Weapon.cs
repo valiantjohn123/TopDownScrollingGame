@@ -44,7 +44,7 @@ public class Weapon : MonoBehaviour
         if (nozzle != null)
         {
             BaseBullet obj = Instantiate(Details.BulletPrefab, nozzle.position, nozzle.rotation);
-            obj.SetUp(Details.Damage, entityType);
+            obj.SetUp(Details.Damage, Details.BulletSpeed, entityType);
         }
     }
 

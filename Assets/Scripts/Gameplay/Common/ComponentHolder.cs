@@ -33,6 +33,13 @@ public class ComponentHolder : MonoBehaviour
             return weaponsController;
         }
     }
+    public GameObject CollisionListner
+    {
+        get
+        {
+            return collisionListner;
+        }
+    }
 
     [SerializeField]
     private Entity objectEntity;
@@ -40,6 +47,8 @@ public class ComponentHolder : MonoBehaviour
     private MovementController movementController;
     [SerializeField]
     private WeaponsController weaponsController;
+    [SerializeField]
+    private GameObject collisionListner;
 
     /// <summary>
     /// Mono awake
