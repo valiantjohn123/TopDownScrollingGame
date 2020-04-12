@@ -19,5 +19,7 @@ public class PlayerEntity : Entity
     public override void OnDeath()
     {
         DependencyHolder.PlayerEntity = null;
+        Destroy(gameObject);
+        DependencyHolder.MainStateController.ChangeState(StateController.States.GameFailed);
     }
 }

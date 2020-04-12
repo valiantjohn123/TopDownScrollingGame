@@ -16,6 +16,8 @@ public class EnemyEntity : Entity
     [SerializeField]
     private int score = 1;
 
+    public static Action<int> EnemiesCountChanged;
+
     /// <summary>
     /// Mono object awake
     /// </summary>
@@ -23,6 +25,8 @@ public class EnemyEntity : Entity
     {
         if (!DependencyHolder.Enemies.Contains(this))
             DependencyHolder.Enemies.Add(this);
+
+        EnemiesCountChanged?.Invoke(DependencyHolder.Enemies.Count);
     }
 
     /// <summary>
@@ -39,6 +43,9 @@ public class EnemyEntity : Entity
     /// </summary>
     private void OnDestroy()
     {
-        DependencyHolder.Enemies.Remove(this);
+        if (DependencyHolder.Enemies != null)
+            DependencyHolder.Enemies.Remove(this);
+
+        EnemiesCountChanged?.Invoke(DependencyHolder.Enemies.Count);
     }
 }

@@ -16,6 +16,7 @@ public class EnemySpawnController : SpawnController
     [SerializeField]
     private List<EnemySpawnStashElement> enemyStash;
 
+    private int spawnedEnemies;
     private int secondsCount;
     private float timer;
 
@@ -24,7 +25,9 @@ public class EnemySpawnController : SpawnController
     /// </summary>
     public override void Started()
     {
-        //Do nothing here
+        spawnedEnemies = 0;
+        secondsCount = 0;
+        timer = 0;
     }
 
     /// <summary>
@@ -67,7 +70,13 @@ public class EnemySpawnController : SpawnController
                     EnemySpawnStashElement enemy = enemyStash.Find(en => en.Type == data.Type);
                     Spawner.SpawnEnemy(enemy.EnemyPrefab, data.SpawnPoint);
                     data.IsSpawned = true;
+                    spawnedEnemies++;
                 }
+            }
+
+            if (spawnedEnemies == Global.CurrentGame.LevelData.LevelSpawnList.Count)
+            {
+                StopOperation();
             }
         }
     }

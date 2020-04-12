@@ -31,6 +31,7 @@ public class Global
             {
                 if (levelData == null)
                     levelData = Resources.Load<LevelDataBase>("LevelData/LevelData_" + CurrentLevel.ToString());
+
                 return levelData; 
             } 
             set => levelData = value; 
@@ -52,6 +53,7 @@ public class Global
         /// </summary>
         public static void Reset()
         {
+            Resources.UnloadAsset(levelData);
             LevelData = null;
             CurrentLevel = 0;
             Score = 0;

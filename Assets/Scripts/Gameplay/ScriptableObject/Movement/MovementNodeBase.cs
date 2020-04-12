@@ -38,6 +38,20 @@ public abstract class MovementNodeBase : ScriptableObject
     public abstract void OnSetUp();
 
     /// <summary>
+    /// Go to next node
+    /// </summary>
+    /// <returns></returns>
+    public MovementNodeBase SkipToNextNode()
+    {
+        if (NextNode != null)
+        {
+            return NextNode.ResetNode();
+        }
+        else
+            return this;
+    }
+
+    /// <summary>
     /// Update the target vector
     /// </summary>
     /// <param name="vector"></param>
@@ -66,10 +80,7 @@ public abstract class MovementNodeBase : ScriptableObject
         //Go to next node once this node is completed
         if (Step >= 1)
         {
-            if (NextNode != null)
-            {
-                return NextNode.ResetNode();
-            }
+            return SkipToNextNode();
         }
 
         OnStep(EasingCurve.Evaluate(Step));

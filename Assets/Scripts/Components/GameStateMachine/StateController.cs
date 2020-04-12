@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +16,11 @@ public class StateController : MonoBehaviour
         private set;
     }
     public State CurrentState;
+    
+    /// <summary>
+    /// Triggers on state changed
+    /// </summary>
+    public Action<State, State> OnStateChanged;
 
     [SerializeField]
     private States defaultState;
@@ -59,8 +65,11 @@ public class StateController : MonoBehaviour
         State nextState = AvailableStates[stateID];
         if (setBackState && CurrentState.StateID != States.NullState)
             nextState.BackID = CurrentState.StateID;
+
+        var prevState = CurrentState;
         CurrentState = nextState;
         CurrentState.LoadState();
+        OnStateChanged?.Invoke(prevState, nextState);
     }
 
     /// <summary>

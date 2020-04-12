@@ -18,7 +18,7 @@ public abstract class State : MonoBehaviour
     public abstract void OnEnter();
 
     /// <summary>
-    /// Calle on state exit
+    /// Called on state exit
     /// </summary>
     public abstract void OnExit();
 
@@ -36,7 +36,12 @@ public abstract class State : MonoBehaviour
     /// </summary>
     public void UnloadState()
     {
-        StateObjects.ForEach(item => item.SetActive(false));
+        StateObjects.ForEach(item => 
+        {   if (item != null)
+                item.SetActive(false);
+            else
+                Debug.Log(item.name);
+        });
         OnExit();
     }
 }

@@ -35,4 +35,13 @@ public class MovementController : MonoBehaviour
             node = node.Execute(compHolder.ObjectEntity);
         }
     }
+
+    /// <summary>
+    /// Set specified node on demand
+    /// </summary>
+    /// <param name="nod"></param>
+    public void SetNode(MovementNodeBase nod)
+    {
+        node = nod.ResetNode();
+    }
 }

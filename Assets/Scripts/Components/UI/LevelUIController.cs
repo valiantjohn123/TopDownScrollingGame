@@ -20,7 +20,7 @@ public class LevelUIController : MonoBehaviour
             int index = i + 1;
             levelObjects[i].SetUp(index);
 
-            levelObjects[i].Toggle.isOn = index == Global.LastUnlockedLevel;
+            levelObjects[i].Toggle.isOn = index == Mathf.Clamp(Global.LastUnlockedLevel, 0, levelObjects.Count);
             levelObjects[i].Toggle.interactable = index <= Global.LastUnlockedLevel;
         }
     }
