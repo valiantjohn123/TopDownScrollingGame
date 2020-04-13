@@ -40,7 +40,7 @@ public abstract class State : MonoBehaviour
         {   if (item != null)
                 item.SetActive(false);
             else
-                Debug.Log(item.name);
+                Debug.Log(item);
         });
         OnExit();
     }

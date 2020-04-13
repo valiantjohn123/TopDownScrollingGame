@@ -10,6 +10,8 @@ public class GameCompleted : State
     {
         if (Global.CurrentGame.CurrentLevel == Global.LastUnlockedLevel)
             Global.LastUnlockedLevel++;
+
+        Global.CurrentGame.SaveData();
     }
 
     public override void OnExit()

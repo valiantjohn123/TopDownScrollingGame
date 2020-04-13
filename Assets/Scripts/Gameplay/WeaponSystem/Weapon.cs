@@ -5,7 +5,6 @@ using UnityEngine;
 /// <summary>
 /// Base weapon class
 /// </summary>
-[RequireComponent(typeof(WeaponsController))]
 public class Weapon : MonoBehaviour
 {
     public WeaponDetails Details
@@ -62,7 +61,7 @@ public class Weapon : MonoBehaviour
             fireTime = 0;
         }
 
-        fireTime += Time.deltaTime * Details.RateOfFire;
+        fireTime += Time.deltaTime * (Details.RateOfFire + Random.Range(0, Details.Randomize));
         return shoot;
     }
 }

@@ -41,12 +41,13 @@ public class ObjectSpawner : MonoBehaviour
     /// </summary>
     /// <param name="enemyObject"></param>
     /// <param name="point"></param>
-    public void SpawnEnemy(GameObject enemyObject, EnemySpawnPoints point)
+    public void SpawnEnemy(GameObject enemyObject, LevelDataBase.EnemySpawnDetails spawnData)
     {
-        EnemySpawnPointObjects spawnPoint = enemySpawnPoints.Find(pt => pt.Point == point);
+        EnemySpawnPointObjects spawnPoint = enemySpawnPoints.Find(pt => pt.Point == spawnData.SpawnPoint);
         if (spawnPoint != null)
         {
-            Instantiate(enemyObject, spawnPoint.PointObject.position, spawnPoint.PointObject.rotation);
+            GameObject obj = Instantiate(enemyObject, spawnPoint.PointObject.position, spawnPoint.PointObject.rotation);
+            obj.GetComponent<MovementController>().SetNode(spawnData.DesgnatedPath);
         }
     }
 }

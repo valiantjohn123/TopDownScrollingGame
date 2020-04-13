@@ -18,4 +18,5 @@ public class WeaponDetails : ScriptableObject
     public float BulletSpeed;
     public float RateOfFire;
     public float Damage;
+    public float Randomize;
 }

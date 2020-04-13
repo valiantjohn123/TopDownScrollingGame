@@ -68,7 +68,7 @@ public class EnemySpawnController : SpawnController
                 if (data.InTime <= secondsCount && !data.IsSpawned)
                 {
                     EnemySpawnStashElement enemy = enemyStash.Find(en => en.Type == data.Type);
-                    Spawner.SpawnEnemy(enemy.EnemyPrefab, data.SpawnPoint);
+                    Spawner.SpawnEnemy(enemy.EnemyPrefab, data);
                     data.IsSpawned = true;
                     spawnedEnemies++;
                 }

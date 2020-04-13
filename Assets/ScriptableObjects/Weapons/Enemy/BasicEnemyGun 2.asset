@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae80f865934d1314cb10071500e815d5, type: 3}
+  m_Name: BasicEnemyGun 2
+  m_EditorClassIdentifier: 
+  SuitedBullet: 0
+  BulletPrefab: {fileID: 452141808639585775, guid: 7b22a45f261790e47ae8badd000c7ed8,
+    type: 3}
+  BulletSpeed: 0.065
+  RateOfFire: 0.8
+  Damage: 1.25

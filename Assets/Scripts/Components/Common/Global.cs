@@ -89,4 +89,9 @@ public class Global
             PlayerPrefs.SetInt("ckedLevel", value);
         }
     }
+
+    /// <summary>
+    /// Total no of levels in the game
+    /// </summary>
+    public const int TotalAvailabeLevels = 5;
 }

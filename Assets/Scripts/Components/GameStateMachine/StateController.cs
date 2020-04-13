@@ -7,7 +7,7 @@ public class StateController : MonoBehaviour
 {
     public enum States 
     {
-        NullState, Menu, Game, GameWin, GameFailed
+        NullState, Menu, Game, GameWin, GameFailed, PauseState
     }
 
     public Dictionary<States, State> AvailableStates 
@@ -47,6 +47,17 @@ public class StateController : MonoBehaviour
     private void Start()
     {
         ChangeState(defaultState, false);
+    }
+
+    /// <summary>
+    /// Mono update
+    /// </summary>
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseState();
+        }
     }
 
     /// <summary>

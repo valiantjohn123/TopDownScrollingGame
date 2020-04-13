@@ -9,7 +9,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TowardsNode", menuName = "Movement/TowardsMove", order = 1)]
 public class TowardsNode : MovementNodeBase
 {
-    public Vector2 TowardsPoint;
+    [SerializeField]
+    private Vector2 TowardsPoint;
 
     private Vector2 targetPoint
     {

@@ -6,13 +6,13 @@ using UnityEngine;
 /// <summary>
 /// Child basic movement objet
 /// </summary>
-[CreateAssetMenu(fileName = "MoveToPoint", menuName = "Movement/MoveToPoint", order = 1)]
-public class MoveToPoint : MovementNodeBase
+[CreateAssetMenu(fileName = "MoveToPointCurve", menuName = "Movement/MoveToPointCurve", order = 1)]
+public class MoveToPointCurve : MovementNodeBase
 {
     [SerializeField]
     private Vector2 targetPoint;
-
     private Vector2 initPos;
+    private Vector2 midPoint;
 
     /// <summary>
     /// Will be called once
@@ -21,6 +21,7 @@ public class MoveToPoint : MovementNodeBase
     {
         if (ParentEntity != null)
             initPos = ParentEntity.transform.position;
+        midPoint = new Vector2(initPos.x, targetPoint.y);
     }
 
     /// <summary>
@@ -30,6 +31,6 @@ public class MoveToPoint : MovementNodeBase
     public override void OnStep(float step)
     {
         if (ParentEntity != null)
-            ParentEntity.transform.position = Vector2.Lerp(initPos, targetPoint, step);
+            ParentEntity.transform.position = Vector2.Lerp(Vector2.Lerp(initPos, midPoint, step), Vector2.Lerp(midPoint, targetPoint, step), step);
     }
 }

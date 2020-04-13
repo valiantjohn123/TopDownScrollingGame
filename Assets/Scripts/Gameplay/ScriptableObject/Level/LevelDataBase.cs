@@ -17,6 +17,7 @@ public class LevelDataBase : ScriptableObject
         public float InTime;
         public EnemyEntity.EnemyType Type;
         public ObjectSpawner.EnemySpawnPoints SpawnPoint;
+        public MovementNodeBase DesgnatedPath;
     }
     #endregion
 

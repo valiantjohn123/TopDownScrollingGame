@@ -6,21 +6,18 @@ using UnityEngine;
 /// <summary>
 /// Child basic movement objet
 /// </summary>
-[CreateAssetMenu(fileName = "MoveToPoint", menuName = "Movement/MoveToPoint", order = 1)]
-public class MoveToPoint : MovementNodeBase
+[CreateAssetMenu(fileName = "MovePlayer", menuName = "Movement/MovePlayer", order = 1)]
+public class MovePlayer : MovementNodeBase
 {
     [SerializeField]
-    private Vector2 targetPoint;
-
-    private Vector2 initPos;
+    private Vector2 positionOffset;
 
     /// <summary>
     /// Will be called once
     /// </summary>
     public override void OnSetUp()
     {
-        if (ParentEntity != null)
-            initPos = ParentEntity.transform.position;
+        TargetPoint = ParentEntity.transform.position;
     }
 
     /// <summary>
@@ -30,6 +27,6 @@ public class MoveToPoint : MovementNodeBase
     public override void OnStep(float step)
     {
         if (ParentEntity != null)
-            ParentEntity.transform.position = Vector2.Lerp(initPos, targetPoint, step);
+            ParentEntity.transform.position = ScreenPositionUtility.GetClampedPosition(Vector2.Lerp(ParentEntity.transform.position, TargetPoint, GetDeltaTime()), positionOffset);
     }
 }

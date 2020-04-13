@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae80f865934d1314cb10071500e815d5, type: 3}
-  m_Name: BasicEnemyGun
+  m_Name: BasicEnemyGun 1
   m_EditorClassIdentifier: 
   SuitedBullet: 0
   BulletPrefab: {fileID: 452141808639585775, guid: 7b22a45f261790e47ae8badd000c7ed8,
@@ -18,3 +18,4 @@ MonoBehaviour:
   BulletSpeed: 0.1
   RateOfFire: 0.5
   Damage: 1
+  Randomize: 0

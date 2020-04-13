@@ -49,7 +49,7 @@ public class InputController : MonoBehaviour
             {
                 if (!initCompleted)
                 {
-                    if (holder.MovementController.Node.GetType() == typeof(MoveToPoint))
+                    if (holder.MovementController.Node.GetType() == typeof(MovePlayer))
                     {
                         SetInitData();
                         initCompleted = true;
