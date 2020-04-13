@@ -28,7 +28,13 @@ public abstract class State : MonoBehaviour
     public void LoadState()
     {
         OnEnter();
-        StateObjects.ForEach(item => item.SetActive(true));
+        StateObjects.ForEach(item => 
+        {
+            if (item != null)
+                item.SetActive(true);
+            else
+                Debug.Log(StateID + " : " + item); 
+        });
     }
 
     /// <summary>
@@ -37,10 +43,11 @@ public abstract class State : MonoBehaviour
     public void UnloadState()
     {
         StateObjects.ForEach(item => 
-        {   if (item != null)
+        {   
+            if (item != null)
                 item.SetActive(false);
             else
-                Debug.Log(item);
+                Debug.Log(StateID+" : " +item);
         });
         OnExit();
     }

@@ -53,3 +53,11 @@ MonoBehaviour:
     Type: 1
     SpawnPoint: 3
     DesgnatedPath: {fileID: 11400000, guid: 6cb978545559a87429b9835b99dd4dfb, type: 2}
+  - InTime: 12
+    Type: 1
+    SpawnPoint: 0
+    DesgnatedPath: {fileID: 11400000, guid: fda8f8abe030fe347822a902636de485, type: 2}
+  - InTime: 12
+    Type: 1
+    SpawnPoint: 4
+    DesgnatedPath: {fileID: 11400000, guid: b344c743086d7be419d09202e483c59a, type: 2}

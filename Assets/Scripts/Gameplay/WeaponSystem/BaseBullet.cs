@@ -26,22 +26,6 @@ public abstract class BaseBullet : MonoBehaviour, ICollisionListner
         Position = transform.position;
     }
 
-    ///// <summary>
-    ///// Mono on trigger enter
-    ///// </summary>
-    ///// <param name="other"></param>
-    //public void OnTrigger(Collider2D other)
-    //{
-    //    var entity = other.gameObject.GetComponent<Entity>();
-    //    if (entity != null && entity.Type != Type)
-    //    {
-    //        if (entity.TakeDamage(Damage))
-    //        {
-    //            Destroy(gameObject);
-    //        }
-    //    }
-    //}
-
     /// <summary>
     /// On collision trigger
     /// </summary>
@@ -50,10 +34,8 @@ public abstract class BaseBullet : MonoBehaviour, ICollisionListner
     {
         if (entity != null && entity.Type != Type)
         {
-            if (entity.TakeDamage(Damage))
-            {
-                Destroy(gameObject);
-            }
+            entity.TakeDamage(Damage);
+            Destroy(gameObject);
         }
     }
 }

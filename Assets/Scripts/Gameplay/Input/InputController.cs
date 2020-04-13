@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Basic input controller
@@ -37,7 +38,7 @@ public class InputController : MonoBehaviour
             SetInitData();
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && EventSystem.current.currentSelectedGameObject == null)
         {
             //Control primary weapon
             if (initCompleted && holder.WeaponsController != null)

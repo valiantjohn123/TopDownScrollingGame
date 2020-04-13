@@ -31,7 +31,7 @@ public abstract class Entity : MonoBehaviour
     /// Take damage metho
     /// </summary>
     /// <param name="damage"></param>
-    public bool TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         if (CanTakeDamage)
         {
@@ -48,7 +48,5 @@ public abstract class Entity : MonoBehaviour
         {
             OnDeath();
         }
-
-        return CanTakeDamage;
     }
 }

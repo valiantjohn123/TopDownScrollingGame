@@ -25,10 +25,8 @@ public class EnemyCollision : MonoBehaviour, ICollisionListner
     {
         if (entity.Type == Entity.EntityType.Player)
         {
-            if (entity.TakeDamage(holder.ObjectEntity.CollisionDamage))
-            {
-                Destroy(gameObject);
-            }
+            entity.TakeDamage(holder.ObjectEntity.CollisionDamage);
+            Destroy(gameObject);
         }
     }
 }

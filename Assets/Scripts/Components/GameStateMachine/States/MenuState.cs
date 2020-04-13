@@ -13,6 +13,7 @@ public class MenuState : State
 
     public override void OnEnter()
     {
+        Input.multiTouchEnabled = false;
         Global.CurrentGame.Reset();
         totalScoreTextBox.text = "Score: "+ Global.TotalScore.ToString();
         levelUIController.SetLevelData();

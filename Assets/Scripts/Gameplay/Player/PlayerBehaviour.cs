@@ -26,6 +26,11 @@ public class PlayerBehaviour : MonoBehaviour
         DependencyHolder.MainStateController.OnStateChanged += OnStateChanged;
     }
 
+    /// <summary>
+    /// On state changed trigger
+    /// </summary>
+    /// <param name="from"></param>
+    /// <param name="current"></param>
     private void OnStateChanged(State from, State current)
     {
         if (current.StateID == StateController.States.GameWin)
