@@ -22,7 +22,8 @@ public class MovementController : MonoBehaviour
     private void Awake()
     {
         compHolder = ComponentHolder.GetHolder(gameObject);
-        node = node.ResetNode();
+        if (node != null)
+            node = node.ResetNode();
     }
 
     /// <summary>

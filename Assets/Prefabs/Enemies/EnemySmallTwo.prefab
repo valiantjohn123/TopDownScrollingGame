@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5335dcdab786643aa5bf8393b1bc46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  readyTime: 2
+  readyTime: 1
 --- !u!114 &252223556033935720
 MonoBehaviour:
   m_ObjectHideFlags: 0

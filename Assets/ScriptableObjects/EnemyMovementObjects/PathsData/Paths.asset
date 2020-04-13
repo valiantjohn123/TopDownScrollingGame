@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PathsList:
   - PathName: 0
-    FirstNode: {fileID: 11400000, guid: e1282b88c0509214392ffc77beabc114, type: 2}
+    FirstNode: {fileID: 11400000, guid: b1ee2f2c3ac778f479392cd2a97bec92, type: 2}
   - PathName: 1
     FirstNode: {fileID: 11400000, guid: 6cb978545559a87429b9835b99dd4dfb, type: 2}
   - PathName: 2
@@ -27,3 +27,5 @@ MonoBehaviour:
     FirstNode: {fileID: 11400000, guid: 52d44e5e22d71fd4b8364badeae959fc, type: 2}
   - PathName: 6
     FirstNode: {fileID: 11400000, guid: 5e450b4f4795df2439573c99e2776d37, type: 2}
+  - PathName: 7
+    FirstNode: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}

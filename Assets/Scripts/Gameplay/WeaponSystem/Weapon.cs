@@ -14,6 +14,7 @@ public class Weapon : MonoBehaviour
             return details;
         }
     }
+
     public float FireTime 
     {
         get
@@ -33,7 +34,7 @@ public class Weapon : MonoBehaviour
         private set;
     }
 
-    private float fireTime;
+    private float fireTime = 1;
 
     /// <summary>
     /// Fire the weapon

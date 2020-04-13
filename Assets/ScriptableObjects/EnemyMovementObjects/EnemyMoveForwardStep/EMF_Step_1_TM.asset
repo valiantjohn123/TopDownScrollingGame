@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f2183fa49afec4297a15603395d49b, type: 3}
   m_Name: EMF_Step_1_TM
   m_EditorClassIdentifier: 
-  NextNode: {fileID: 11400000}
+  NextNode: {fileID: 11400000, guid: 1801d1ffe564c904095530beea2619ee, type: 2}
   EasingCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.03183962
+      outSlope: 0.03183962
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.6666667
     - serializedVersion: 3
       time: 1
       value: 1
@@ -37,6 +37,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  Speed: 0.2
-  Delay: 0.2
-  TowardsPoint: {x: 0, y: -20}
+  Speed: 1
+  Delay: 0
+  TowardsPoint: {x: 0, y: -2}

@@ -11,8 +11,6 @@ public class WeaponsController : MonoBehaviour
     [SerializeField]
     private List<Weapon> specialWeapons;
 
-    public static Action<int, float> WeaponUpdated;
-
     /// <summary>
     /// Mono on awake
     /// </summary>
@@ -43,17 +41,5 @@ public class WeaponsController : MonoBehaviour
     {
         var weapon = specialWeapons[index];
         weapon.Fire(holder.ObjectEntity.Type);
-    }
-
-    /// <summary>
-    /// Mono on update
-    /// </summary>
-    private void Update()
-    {
-        for (int i = 0; i < specialWeapons.Count; i++)
-        {
-            specialWeapons[i].WeaponUpdate();
-            WeaponUpdated?.Invoke(i, specialWeapons[i].FireTime);
-        }
     }
 }
