@@ -10,7 +10,7 @@ public class WeaponDetails : ScriptableObject
 {
     public enum BulletType
     {
-        Regular
+        Regular, Missile
     }
 
     public BulletType SuitedBullet;

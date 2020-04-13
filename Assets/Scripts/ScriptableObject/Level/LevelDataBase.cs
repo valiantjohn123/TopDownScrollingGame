@@ -17,12 +17,30 @@ public class LevelDataBase : ScriptableObject
         public float InTime;
         public EnemyEntity.EnemyType Type;
         public ObjectSpawner.EnemySpawnPoints SpawnPoint;
+        public Path.Paths PathName;
         public MovementNodeBase DesgnatedPath;
     }
     #endregion
 
     /// <summary>
+    /// Path Data
+    /// </summary>
+    public Path PathData;
+
+    /// <summary>
     /// List of spawn data
     /// </summary>
     public List<EnemySpawnDetails> LevelSpawnList;
+
+    /// <summary>
+    /// Populates the needed data
+    /// </summary>
+    [ContextMenu("Populate Data")]
+    private void GenerateData()
+    {
+        for (int i = 0; i < LevelSpawnList.Count; i++)
+        {
+            LevelSpawnList[i].DesgnatedPath = PathData.PathsList.Find(pt => pt.PathName == LevelSpawnList[i].PathName).FirstNode;
+        }
+    }
 }

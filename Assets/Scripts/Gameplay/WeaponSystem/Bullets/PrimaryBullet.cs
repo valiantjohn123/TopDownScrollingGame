@@ -13,13 +13,4 @@ public class PrimaryBullet : BaseBullet
 
         Step += Time.deltaTime * Speed;
     }
-
-    ///// <summary>
-    ///// Ontrigger enter
-    ///// </summary>
-    ///// <param name="other"></param>
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    OnTrigger(other);
-    //}
 }

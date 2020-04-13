@@ -36,6 +36,7 @@ public class PlayerAbilityHandler : MonoBehaviour
                 StartCoroutine(UserShield(data));
                 break;
             case PowerUps.PowerUpType.Missile:
+                InputController.SpecialWeaponFire?.Invoke(0);
                 break;
         }
     }

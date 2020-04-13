@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a56c232d82f2f04198aebb465de0ace, type: 3}
-  m_Name: PowerUpsData
+  m_Script: {fileID: 11500000, guid: ae80f865934d1314cb10071500e815d5, type: 3}
+  m_Name: Missile
   m_EditorClassIdentifier: 
-  PowerUpsList:
-  - Type: 0
-    ChargeTime: 5
-    ExpireTime: 4.5
-  - Type: 1
-    ChargeTime: 15
-    ExpireTime: 0
+  SuitedBullet: 1
+  BulletPrefab: {fileID: 452141808639585775, guid: 1cf9d77b4d73c194abe1d5a82c7362e4,
+    type: 3}
+  BulletSpeed: 0.04
+  RateOfFire: 0.1
+  Damage: 10
+  Randomize: 0

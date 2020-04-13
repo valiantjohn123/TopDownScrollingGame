@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8780732327970031802}
+  - component: {fileID: 8431472063111735442}
   m_Layer: 0
   m_Name: Weapon1
   m_TagString: Untagged
@@ -30,6 +31,20 @@ Transform:
   m_Father: {fileID: 7598674764566137504}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8431472063111735442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831997347358764691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004df54b483613d4391bb65ee1d08b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  details: {fileID: 11400000, guid: ee4566cd3eac10c419f238cd9a3f1e13, type: 2}
+  nozzle: {fileID: 8780732327970031802}
 --- !u!1 &4114859961308562392
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +74,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7598674764566137504}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8767181901323017491
 SpriteRenderer:
@@ -140,7 +155,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 7598674764566137504}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3513327533098500186
 SpriteRenderer:
@@ -209,7 +224,6 @@ GameObject:
   - component: {fileID: 7598674764566137517}
   - component: {fileID: 7598674764566137518}
   - component: {fileID: 1551271102977510390}
-  - component: {fileID: 5077963113624484574}
   - component: {fileID: 6037146470266112937}
   - component: {fileID: 1629346742122410213}
   m_Layer: 0
@@ -231,6 +245,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 8780732327970031802}
+  - {fileID: 981433811166587071}
   - {fileID: 6594904701945600139}
   - {fileID: 5898040602216816114}
   m_Father: {fileID: 0}
@@ -407,22 +422,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryWeapons:
-  - {fileID: 5077963113624484574}
-  specialWeapons: []
---- !u!114 &5077963113624484574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7598674764566137507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 004df54b483613d4391bb65ee1d08b70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  details: {fileID: 11400000, guid: ee4566cd3eac10c419f238cd9a3f1e13, type: 2}
-  nozzle: {fileID: 8780732327970031802}
+  - {fileID: 8431472063111735442}
+  specialWeapons:
+  - {fileID: 3547908178719536586}
 --- !u!114 &6037146470266112937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,3 +451,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldSprite: {fileID: 6520078849711189281}
+--- !u!1 &7788141243296072231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981433811166587071}
+  - component: {fileID: 3547908178719536586}
+  m_Layer: 0
+  m_Name: Weapon2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981433811166587071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788141243296072231}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7598674764566137504}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3547908178719536586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7788141243296072231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004df54b483613d4391bb65ee1d08b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  details: {fileID: 11400000, guid: 3374ea19acd187a488ea8830858cda11, type: 2}
+  nozzle: {fileID: 981433811166587071}

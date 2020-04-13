@@ -8,7 +8,7 @@ public class EnemyEntity : Entity
 {
     public enum EnemyType
     {
-        Small, SmallTricky, Medium, Boss
+        Small, SmallTricky, Medium, MediumHeavy, Boss
     }
 
     public EnemyType EnemyTypeEnum;

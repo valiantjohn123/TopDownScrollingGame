@@ -76,7 +76,7 @@ public class InputController : MonoBehaviour
     /// <param name="index"></param>
     private void FireSpecialWeapons(int index)
     {
-        if (initCompleted && holder.WeaponsController != null)
+        if (holder.WeaponsController != null)
         {
             holder.WeaponsController.FireSpecialWeapon(index);
         }

@@ -41,11 +41,8 @@ public class WeaponsController : MonoBehaviour
     /// </summary>
     public void FireSpecialWeapon(int index)
     {
-        var weapon = primaryWeapons[index];
-        if (weapon.WeaponUpdate())
-        {
-            weapon.Fire(holder.ObjectEntity.Type);
-        }
+        var weapon = specialWeapons[index];
+        weapon.Fire(holder.ObjectEntity.Type);
     }
 
     /// <summary>

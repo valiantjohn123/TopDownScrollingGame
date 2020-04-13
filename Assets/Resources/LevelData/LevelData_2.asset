@@ -12,4 +12,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccee38344da8344eba4bccde8bd6c7c, type: 3}
   m_Name: LevelData_2
   m_EditorClassIdentifier: 
-  LevelSpawnList: []
+  PathData: {fileID: 0}
+  LevelSpawnList:
+  - InTime: 1
+    Type: 0
+    SpawnPoint: 0
+    PathName: 0
+    DesgnatedPath: {fileID: 11400000, guid: e1282b88c0509214392ffc77beabc114, type: 2}
+  - InTime: 1
+    Type: 0
+    SpawnPoint: 2
+    PathName: 0
+    DesgnatedPath: {fileID: 11400000, guid: e1282b88c0509214392ffc77beabc114, type: 2}
+  - InTime: 1
+    Type: 0
+    SpawnPoint: 4
+    PathName: 0
+    DesgnatedPath: {fileID: 11400000, guid: e1282b88c0509214392ffc77beabc114, type: 2}
+  - InTime: 6
+    Type: 1
+    SpawnPoint: 1
+    PathName: 1
+    DesgnatedPath: {fileID: 11400000, guid: 6cb978545559a87429b9835b99dd4dfb, type: 2}
+  - InTime: 8
+    Type: 1
+    SpawnPoint: 3
+    PathName: 1
+    DesgnatedPath: {fileID: 11400000, guid: 6cb978545559a87429b9835b99dd4dfb, type: 2}
+  - InTime: 10
+    Type: 1
+    SpawnPoint: 0
+    PathName: 3
+    DesgnatedPath: {fileID: 11400000, guid: fda8f8abe030fe347822a902636de485, type: 2}
+  - InTime: 10
+    Type: 1
+    SpawnPoint: 4
+    PathName: 4
+    DesgnatedPath: {fileID: 11400000, guid: b344c743086d7be419d09202e483c59a, type: 2}
+  - InTime: 14
+    Type: 2
+    SpawnPoint: 0
+    PathName: 6
+    DesgnatedPath: {fileID: 11400000, guid: 5e450b4f4795df2439573c99e2776d37, type: 2}
+  - InTime: 16
+    Type: 0
+    SpawnPoint: 2
+    PathName: 0
+    DesgnatedPath: {fileID: 11400000, guid: 5e450b4f4795df2439573c99e2776d37, type: 2}

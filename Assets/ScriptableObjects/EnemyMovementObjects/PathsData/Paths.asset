@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b5401cc50164d44a9cf75fdce5b971, type: 3}
+  m_Name: Paths
+  m_EditorClassIdentifier: 
+  PathsList:
+  - PathName: 0
+    FirstNode: {fileID: 11400000, guid: e1282b88c0509214392ffc77beabc114, type: 2}
+  - PathName: 1
+    FirstNode: {fileID: 11400000, guid: 6cb978545559a87429b9835b99dd4dfb, type: 2}
+  - PathName: 2
+    FirstNode: {fileID: 11400000, guid: 8a935b0cf0edd0d49bd83045f50e7ee2, type: 2}
+  - PathName: 3
+    FirstNode: {fileID: 11400000, guid: fda8f8abe030fe347822a902636de485, type: 2}
+  - PathName: 4
+    FirstNode: {fileID: 11400000, guid: b344c743086d7be419d09202e483c59a, type: 2}
+  - PathName: 5
+    FirstNode: {fileID: 11400000, guid: 52d44e5e22d71fd4b8364badeae959fc, type: 2}
+  - PathName: 6
+    FirstNode: {fileID: 11400000, guid: 5e450b4f4795df2439573c99e2776d37, type: 2}

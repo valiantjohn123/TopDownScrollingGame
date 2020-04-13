@@ -47,6 +47,6 @@ public abstract class Entity : MonoBehaviour
         if (Health <= 0)
         {
             OnDeath();
-        }
+        } 
     }
 }
