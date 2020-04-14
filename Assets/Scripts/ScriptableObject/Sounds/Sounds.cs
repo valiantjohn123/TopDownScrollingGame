@@ -11,7 +11,7 @@ public class Sounds : ScriptableObject
     #region Helper classes
     public enum SoundType
     {
-        BasicGunPlayer, BasicGunEnemy, Rocket, Explosion, BG
+        BasicGunPlayer, BasicGunEnemy, Rocket, Explosion, BG, ExplosionMedium, ExplosionHuge
     }
 
     [System.Serializable]

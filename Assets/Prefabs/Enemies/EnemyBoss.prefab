@@ -274,6 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathExplosion: {fileID: 6992249738079822962, guid: 3c0af605b6946f64ca73ee173d5b180f,
     type: 3}
+  soundType: 6
 --- !u!1 &681315423071880015
 GameObject:
   m_ObjectHideFlags: 0

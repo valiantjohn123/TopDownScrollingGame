@@ -10,6 +10,9 @@ public class EffectHandler : MonoBehaviour, IDeathEffectListner
     [SerializeField]
     private GameObject deathExplosion;
 
+    [SerializeField]
+    private Sounds.SoundType soundType;
+
     /// <summary>
     /// On death listner
     /// </summary>
@@ -17,5 +20,7 @@ public class EffectHandler : MonoBehaviour, IDeathEffectListner
     {
         if (deathExplosion != null)
             Instantiate(deathExplosion, transform.position, transform.rotation);
+
+        SoundHandler.PlaySound(soundType);
     }
 }
