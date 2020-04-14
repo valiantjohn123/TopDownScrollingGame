@@ -8,6 +8,20 @@ using UnityEngine;
 public class PrimaryBullet : BaseBullet
 {
     /// <summary>
+    /// Mono start
+    /// </summary>
+    private void Start()
+    {
+        Sounds.SoundType sType;
+        if (Type == Entity.EntityType.Player)
+            sType = Sounds.SoundType.BasicGunPlayer;
+        else
+            sType = Sounds.SoundType.BasicGunEnemy;
+
+        SoundHandler.PlaySound(sType);
+    }
+
+    /// <summary>
     /// On hit success
     /// </summary>
     public override void OnHit(Entity entity)

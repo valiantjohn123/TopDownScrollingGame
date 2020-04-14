@@ -3,21 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// Score UI handler
 /// </summary>
-[RequireComponent(typeof(Text))]
+[RequireComponent(typeof(TextMeshProUGUI))]
 public class ScoreUI : MonoBehaviour
 {
-    private Text textBox;
+    private TextMeshProUGUI textBox;
 
     /// <summary>
     /// Mono awake
     /// </summary>
     private void Awake()
     {
-        textBox = GetComponent<Text>();
+        textBox = GetComponent<TextMeshProUGUI>();
         Global.CurrentGame.ScoreUpdated += OnScoreUpdated;
     }
 

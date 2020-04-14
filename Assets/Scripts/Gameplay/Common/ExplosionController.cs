@@ -15,6 +15,7 @@ public class ExplosionController : MonoBehaviour
     /// </summary>
     void Start()
     {
+        SoundHandler.PlaySound(Sounds.SoundType.Explosion);
         Destroy(gameObject, delay);
     }
 }

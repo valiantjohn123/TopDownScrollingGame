@@ -9,6 +9,14 @@ public class Missile : BaseBullet
 {
     [SerializeField]
     private float effectRadius = 1f;
+    
+    /// <summary>
+    /// Mono start
+    /// </summary>
+    private void Start()
+    {
+        SoundHandler.PlaySound(Sounds.SoundType.Rocket);
+    }
 
     /// <summary>
     /// On hit success
