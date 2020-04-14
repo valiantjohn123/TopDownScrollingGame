@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 154866564875102314}
   - component: {fileID: 9205653087881474249}
   - component: {fileID: 4902805924853460987}
+  - component: {fileID: 2066207244565624562}
   m_Layer: 0
   m_Name: EnemyMediumOne
   m_TagString: Untagged
@@ -253,6 +254,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3599539, y: 0.702646}
   m_EdgeRadius: 0
+--- !u!114 &2066207244565624562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252223556033935723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb3915462a48ac47bb5cf203d9e3248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathExplosion: {fileID: 3993260884016136104, guid: 244d7d50f0a2fce408b05d63da962101,
+    type: 3}
 --- !u!1 &2380988292335254100
 GameObject:
   m_ObjectHideFlags: 0

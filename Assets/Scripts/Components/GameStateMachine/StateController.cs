@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Game state controller, this controls game states. States control UI 
+/// </summary>
 public class StateController : MonoBehaviour
 {
     public enum States 

@@ -3,6 +3,8 @@ using UnityEngine;
 
 /// <summary>
 /// Entity base class
+/// This is a common class used for both player and enemies
+/// This contains basic properties of entities
 /// </summary>
 public abstract class Entity : MonoBehaviour
 {
@@ -33,7 +35,7 @@ public abstract class Entity : MonoBehaviour
     /// <param name="damage"></param>
     public void TakeDamage(float damage)
     {
-        if (CanTakeDamage && ScreenPositionUtility.InScreen(transform.position, Vector2.one * 0.25f))
+        if (CanTakeDamage && ScreenPositionUtility.InScreen(transform.position, Vector2.one * 0.25f) && DependencyHolder.MainStateController.CurrentState.StateID == StateController.States.Game)
         {
             if (totalHealth < 0)
             {
@@ -46,7 +48,20 @@ public abstract class Entity : MonoBehaviour
 
         if (Health <= 0)
         {
+            SignalOnDeath();
             OnDeath();
-        } 
+        }
+    }
+
+    /// <summary>
+    /// Signals on death for listner
+    /// </summary>
+    private void SignalOnDeath()
+    {
+        var dListner = GetComponent<IDeathEffectListner>();
+        if (dListner != null)
+        {
+            dListner.OnDeath();
+        }
     }
 }

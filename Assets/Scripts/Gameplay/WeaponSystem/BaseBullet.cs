@@ -12,6 +12,13 @@ public abstract class BaseBullet : MonoBehaviour, ICollisionListner
     public Vector2 Position;
     public Vector2 Direction;
 
+    private IDeathEffectListner deathEffectListner;
+
+    /// <summary>
+    /// On hit trigger
+    /// </summary>
+    public abstract void OnHit(Entity entity);
+
     /// <summary>
     /// Set up the bullet object
     /// </summary>
@@ -24,6 +31,7 @@ public abstract class BaseBullet : MonoBehaviour, ICollisionListner
         Speed = speed;
         Direction = transform.up;
         Position = transform.position;
+        deathEffectListner = GetComponent<IDeathEffectListner>();
     }
 
     /// <summary>
@@ -34,6 +42,8 @@ public abstract class BaseBullet : MonoBehaviour, ICollisionListner
     {
         if (entity != null && entity.Type != Type)
         {
+            deathEffectListner?.OnDeath();
+            OnHit(entity);
             entity.TakeDamage(Damage);
             Destroy(gameObject);
         }

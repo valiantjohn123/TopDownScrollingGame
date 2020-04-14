@@ -4,24 +4,53 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Base movement node
+/// Base structure for movement node
+/// Bascially each movement is a node and every node is connected to next node. All those connected nodes makes a path
+/// Those paths are attached to enemies, once they are instantiated, enemies follow the path they are assigned
 /// </summary>
 public abstract class MovementNodeBase : ScriptableObject
 {
+    /// <summary>
+    /// Next linked node to move to
+    /// </summary>
     public MovementNodeBase NextNode;
+    /// <summary>
+    /// Animation curve for easing the node starting and ending points
+    /// </summary>
     public AnimationCurve EasingCurve;
     
+    /// <summary>
+    /// Speed multiplier, that defines how much time it takes for the node to complete executing
+    /// </summary>
     public float Speed = 1;
+    /// <summary>
+    /// A short delay before starting the execution
+    /// </summary>
     public float Delay;
 
+    /// <summary>
+    /// Target vector position, the attached entity will be moved to that point by the end of node
+    /// </summary>
     [NonSerialized]
     public Vector2 TargetPoint;
+    /// <summary>
+    /// The parent entity, that this node belongs to
+    /// </summary>
     [NonSerialized]
     public Entity ParentEntity;
+    /// <summary>
+    /// Step number, this tells how much node it executed
+    /// </summary>
     [NonSerialized]
     public float Step;
+    /// <summary>
+    /// To make sure that node is done setting up
+    /// </summary>
     [NonSerialized]
     public bool IsElementSetupComplete;
+    /// <summary>
+    /// Start delay timer variable
+    /// </summary>
     [NonSerialized]
     private float currentDelay;
 

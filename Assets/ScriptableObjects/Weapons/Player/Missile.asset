@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae80f865934d1314cb10071500e815d5, type: 3}
   m_Name: Missile
   m_EditorClassIdentifier: 
-  SuitedBullet: 1
-  BulletPrefab: {fileID: 452141808639585775, guid: 1cf9d77b4d73c194abe1d5a82c7362e4,
+  BulletPrefab: {fileID: 6362196494165927103, guid: 1cf9d77b4d73c194abe1d5a82c7362e4,
     type: 3}
   BulletSpeed: 0.04
   RateOfFire: 0.1

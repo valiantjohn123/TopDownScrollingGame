@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Game and player data
+/// Game and player data, this is where player data saves and loads. Game data will also be saved here temporarly
 /// </summary>
 public class Global
 {
@@ -45,7 +45,8 @@ public class Global
         /// </summary>
         public static void SaveData()
         {
-            TotalScore += Score;
+            if (TotalScore < Score)
+                TotalScore = Score;
         }
 
         /// <summary>

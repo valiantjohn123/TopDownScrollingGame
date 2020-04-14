@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 154866564875102314}
   - component: {fileID: 9205653087881474249}
   - component: {fileID: 4902805924853460987}
+  - component: {fileID: 501261920712528261}
   m_Layer: 0
   m_Name: EnemySmallOne
   m_TagString: Untagged
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8dc8719ef5e034faad7a5c18904704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  node: {fileID: 11400000, guid: e1282b88c0509214392ffc77beabc114, type: 2}
+  node: {fileID: 0}
 --- !u!114 &2693163161993926403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +252,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.68, y: 2.32}
   m_EdgeRadius: 0
+--- !u!114 &501261920712528261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252223556033935723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb3915462a48ac47bb5cf203d9e3248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathExplosion: {fileID: 1665910476510387160, guid: b4d8114043251014c8e02faeee5fd608,
+    type: 3}
 --- !u!1 &2380988292335254100
 GameObject:
   m_ObjectHideFlags: 0

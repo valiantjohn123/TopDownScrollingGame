@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Gets the camera and attachs to canvas
+/// </summary>
 [RequireComponent(typeof(Canvas))]
 public class CameraAttacher : MonoBehaviour
 {

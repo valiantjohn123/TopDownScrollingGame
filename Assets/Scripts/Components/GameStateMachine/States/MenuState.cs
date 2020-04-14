@@ -15,7 +15,7 @@ public class MenuState : State
     {
         Input.multiTouchEnabled = false;
         Global.CurrentGame.Reset();
-        totalScoreTextBox.text = "Score: "+ Global.TotalScore.ToString();
+        totalScoreTextBox.text = "High Score: "+ Global.TotalScore.ToString();
         levelUIController.SetLevelData();
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Component holder helper
+/// This holds components for easier access
 /// </summary>
 public class ComponentHolder : MonoBehaviour
 {

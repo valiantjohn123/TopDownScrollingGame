@@ -74,7 +74,62 @@ MonoBehaviour:
     SpawnPoint: 4
     PathName: 7
     DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
-  - InTime: 16
+  - InTime: 12
+    Type: 3
+    SpawnPoint: 2
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 12
+    Type: 1
+    SpawnPoint: 0
+    PathName: 8
+    DesgnatedPath: {fileID: 11400000, guid: 0509b4521ddaf1e4bb1e33fcf1e3ba16, type: 2}
+  - InTime: 12
+    Type: 1
+    SpawnPoint: 1
+    PathName: 9
+    DesgnatedPath: {fileID: 11400000, guid: 34c126fc83c5fb740aa16bc68be19f22, type: 2}
+  - InTime: 12
+    Type: 1
+    SpawnPoint: 4
+    PathName: 9
+    DesgnatedPath: {fileID: 11400000, guid: 34c126fc83c5fb740aa16bc68be19f22, type: 2}
+  - InTime: 12
+    Type: 1
+    SpawnPoint: 3
+    PathName: 8
+    DesgnatedPath: {fileID: 11400000, guid: 0509b4521ddaf1e4bb1e33fcf1e3ba16, type: 2}
+  - InTime: 12
+    Type: 1
+    SpawnPoint: 3
+    PathName: 8
+    DesgnatedPath: {fileID: 11400000, guid: 0509b4521ddaf1e4bb1e33fcf1e3ba16, type: 2}
+  - InTime: 18
+    Type: 0
+    SpawnPoint: 4
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 19
+    Type: 0
+    SpawnPoint: 3
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 20
+    Type: 0
+    SpawnPoint: 2
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 21
+    Type: 0
+    SpawnPoint: 1
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 22
+    Type: 0
+    SpawnPoint: 0
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 28
     Type: 4
     SpawnPoint: 2
     PathName: 6
