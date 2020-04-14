@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae80f865934d1314cb10071500e815d5, type: 3}
-  m_Name: BasicGun
+  m_Name: SubMissile
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 452141808639585775, guid: ebc6d048e4efde3439ecc59dbc0bb0a7,
+  BulletPrefab: {fileID: 8060665858670407180, guid: a1db7cb2a98ea144cb9aff7b69e8f914,
     type: 3}
-  BulletSpeed: 0.5
-  RateOfFire: 5
-  Damage: 0.5
+  BulletSpeed: 1
+  RateOfFire: 0.5
+  Damage: 1
   Randomize: 0

@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 452141808639585773}
   - component: {fileID: 452141808639585772}
   - component: {fileID: 7668562196608378192}
-  - component: {fileID: 6362196494165927103}
+  - component: {fileID: 8060665858670407180}
   - component: {fileID: 918458865067878708}
   - component: {fileID: 5823701107759535263}
   - component: {fileID: 4412524950669486518}
   - component: {fileID: 7278021321788917981}
   m_Layer: 0
-  m_Name: Missile
+  m_Name: SubMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452141808639585774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.23, y: 10.08, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 1}
   m_Children:
   - {fileID: 4698929729298000616}
   m_Father: {fileID: 0}
@@ -104,7 +104,7 @@ MonoBehaviour:
   movementController: {fileID: 0}
   weaponsController: {fileID: 0}
   collisionListner: {fileID: 452141808639585774}
---- !u!114 &6362196494165927103
+--- !u!114 &8060665858670407180
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 452141808639585774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52cf10bb4f47b444790976915941ffe1, type: 3}
+  m_Script: {fileID: 11500000, guid: 304362746f5cb0247861c3c4c4fbf705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 100
@@ -123,7 +123,6 @@ MonoBehaviour:
   Type: 0
   Position: {x: 0, y: 0}
   Direction: {x: 0, y: 0}
-  effectRadius: 1.65
 --- !u!114 &918458865067878708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +148,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.010818481}
+  m_Offset: {x: 0, y: -0.46034423}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -160,7 +159,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7493175, y: 2.739975}
+  m_Size: {x: 0.7493175, y: 1.8409235}
   m_EdgeRadius: 0
 --- !u!114 &4412524950669486518
 MonoBehaviour:
@@ -186,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb3915462a48ac47bb5cf203d9e3248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathExplosion: {fileID: 6992249738079822962, guid: 3c0af605b6946f64ca73ee173d5b180f,
+  deathExplosion: {fileID: 1665910476510387160, guid: b4d8114043251014c8e02faeee5fd608,
     type: 3}
   soundType: 0
 --- !u!1 &2414520585108804996
@@ -271,7 +270,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.10625267
+        value: 0.06250572
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -411,8 +410,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.4
-      minScalar: 0.12
+      scalar: 0.6
+      minScalar: 0.3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1161,7 +1160,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 250
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -2320,7 +2319,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.01285347
+          time: 0.0000017546117
           value: 1
           inSlope: 0
           outSlope: 0
@@ -2329,8 +2328,8 @@ ParticleSystem:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.9974365
-          value: -0.9729767
+          time: 1
+          value: 0.027023315
           inSlope: 0
           outSlope: 0
           tangentMode: 0
