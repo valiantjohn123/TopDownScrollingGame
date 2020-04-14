@@ -520,6 +520,7 @@ MonoBehaviour:
   - {fileID: 2559431256116859715}
   specialWeapons:
   - {fileID: 3547908178719536586}
+  - {fileID: 2559431256116859715}
 --- !u!114 &6037146470266112937
 MonoBehaviour:
   m_ObjectHideFlags: 0

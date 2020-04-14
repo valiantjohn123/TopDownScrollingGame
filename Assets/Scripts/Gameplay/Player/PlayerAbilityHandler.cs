@@ -38,6 +38,9 @@ public class PlayerAbilityHandler : MonoBehaviour
             case PowerUps.PowerUpType.Missile:
                 InputController.SpecialWeaponFire?.Invoke(0);
                 break;
+            case PowerUps.PowerUpType.Torpidoes:
+                StartCoroutine(FireToprpidoes(data));
+                break;
         }
     }
 
@@ -52,6 +55,28 @@ public class PlayerAbilityHandler : MonoBehaviour
         yield return new WaitForSeconds(data.ExpireTime);
         holder.ObjectEntity.CanTakeDamage = true;
         shieldSprite.SetActive(false);
+    }
+
+    /// <summary>
+    /// Fire the torpedios
+    /// </summary>
+    /// <param name="data"></param>
+    /// <returns></returns>
+    private IEnumerator FireToprpidoes(PowerUps.PowerUpData data)
+    {
+        float interval = 0;
+        float timer = 0;
+        while (timer <= 1)
+        {
+            if (interval >= 8)
+            {
+                InputController.SpecialWeaponFire?.Invoke(1);
+                interval = 0;
+            }
+            interval++;
+            timer += Time.deltaTime / data.ExpireTime;
+            yield return null;
+        }
     }
 
     /// <summary>

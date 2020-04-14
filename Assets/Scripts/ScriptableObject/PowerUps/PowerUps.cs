@@ -11,7 +11,7 @@ public class PowerUps : ScriptableObject
     #region Helper data
     public enum PowerUpType
     {
-        Shield, Missile
+        Shield, Missile, Torpidoes
     }
 
     [System.Serializable]

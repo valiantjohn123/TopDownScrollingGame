@@ -19,3 +19,6 @@ MonoBehaviour:
   - Type: 1
     ChargeTime: 15
     ExpireTime: 0
+  - Type: 2
+    ChargeTime: 15
+    ExpireTime: 2

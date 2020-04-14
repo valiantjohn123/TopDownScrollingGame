@@ -38,8 +38,9 @@ public class SubMissile : BaseBullet
         }
         else
         {
-            if (DependencyHolder.Enemies.Count > 0 && DependencyHolder.Enemies[DependencyHolder.Enemies.Count - 1] != null)
-                targerEntity = DependencyHolder.Enemies[DependencyHolder.Enemies.Count - 1].transform;
+            int index = Random.Range(0, DependencyHolder.Enemies.Count - 1);
+            if (DependencyHolder.Enemies.Count > 0 && DependencyHolder.Enemies[index] != null)
+                targerEntity = DependencyHolder.Enemies[index].transform;
         }
 
         return targerEntity != null;
