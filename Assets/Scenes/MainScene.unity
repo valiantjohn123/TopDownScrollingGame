@@ -3292,6 +3292,9 @@ MonoBehaviour:
   - Type: 3
     EnemyPrefab: {fileID: 252223556033935723, guid: d9b7db5ce545abd42afffb9a8bc7367b,
       type: 3}
+  - Type: 4
+    EnemyPrefab: {fileID: 252223556033935723, guid: b8c54650752f6734fa61ecdc6bdff4ca,
+      type: 3}
 --- !u!1 &1791268352
 GameObject:
   m_ObjectHideFlags: 0

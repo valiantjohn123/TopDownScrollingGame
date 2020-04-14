@@ -79,17 +79,17 @@ MonoBehaviour:
     SpawnPoint: 4
     PathName: 0
     DesgnatedPath: {fileID: 11400000, guid: b1ee2f2c3ac778f479392cd2a97bec92, type: 2}
-  - InTime: 21
+  - InTime: 23
     Type: 2
     SpawnPoint: 0
     PathName: 3
     DesgnatedPath: {fileID: 11400000, guid: fda8f8abe030fe347822a902636de485, type: 2}
-  - InTime: 21
+  - InTime: 23
     Type: 2
     SpawnPoint: 4
     PathName: 4
     DesgnatedPath: {fileID: 11400000, guid: b344c743086d7be419d09202e483c59a, type: 2}
-  - InTime: 21
+  - InTime: 23
     Type: 2
     SpawnPoint: 2
     PathName: 7

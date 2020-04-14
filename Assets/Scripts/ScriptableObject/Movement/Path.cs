@@ -11,7 +11,7 @@ public class Path : ScriptableObject
     #region Classes
     public enum Paths
     {
-        MoveForwardStep, MoveToCenter, MoveToP1, MoveToP2, MoveToP4, MoveToP5, MoveSideToSide, MoveForward
+        MoveForwardStep, MoveToCenter, MoveToP1, MoveToP2, MoveToP4, MoveToP5, MoveSideToSide, MoveForward, MoveToLeft, MoveToRight
     }
 
     [System.Serializable]

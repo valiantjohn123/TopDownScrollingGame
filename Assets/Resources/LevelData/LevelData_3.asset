@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ccee38344da8344eba4bccde8bd6c7c, type: 3}
+  m_Name: LevelData_3
+  m_EditorClassIdentifier: 
+  PathData: {fileID: 11400000, guid: aa3daf7c3fd80414fa680edbefda2aba, type: 2}
+  LevelSpawnList:
+  - InTime: 1
+    Type: 2
+    SpawnPoint: 2
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 1
+    Type: 0
+    SpawnPoint: 0
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 1
+    Type: 0
+    SpawnPoint: 4
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 3
+    Type: 0
+    SpawnPoint: 4
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 3
+    Type: 0
+    SpawnPoint: 0
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 4
+    Type: 0
+    SpawnPoint: 1
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 4
+    Type: 0
+    SpawnPoint: 3
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 5
+    Type: 0
+    SpawnPoint: 2
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 6
+    Type: 0
+    SpawnPoint: 0
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 6
+    Type: 0
+    SpawnPoint: 1
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 6
+    Type: 0
+    SpawnPoint: 2
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 6
+    Type: 0
+    SpawnPoint: 3
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 6
+    Type: 0
+    SpawnPoint: 4
+    PathName: 7
+    DesgnatedPath: {fileID: 11400000, guid: 8dafafd5f01841a44ba3c39faf1f6539, type: 2}
+  - InTime: 10
+    Type: 1
+    SpawnPoint: 0
+    PathName: 8
+    DesgnatedPath: {fileID: 11400000, guid: 0509b4521ddaf1e4bb1e33fcf1e3ba16, type: 2}
+  - InTime: 10
+    Type: 1
+    SpawnPoint: 4
+    PathName: 9
+    DesgnatedPath: {fileID: 11400000, guid: 34c126fc83c5fb740aa16bc68be19f22, type: 2}
+  - InTime: 14
+    Type: 3
+    SpawnPoint: 2
+    PathName: 0
+    DesgnatedPath: {fileID: 11400000, guid: b1ee2f2c3ac778f479392cd2a97bec92, type: 2}
+  - InTime: 14
+    Type: 2
+    SpawnPoint: 0
+    PathName: 8
+    DesgnatedPath: {fileID: 11400000, guid: 0509b4521ddaf1e4bb1e33fcf1e3ba16, type: 2}
+  - InTime: 14
+    Type: 2
+    SpawnPoint: 4
+    PathName: 9
+    DesgnatedPath: {fileID: 11400000, guid: 34c126fc83c5fb740aa16bc68be19f22, type: 2}

@@ -33,7 +33,7 @@ public abstract class Entity : MonoBehaviour
     /// <param name="damage"></param>
     public void TakeDamage(float damage)
     {
-        if (CanTakeDamage)
+        if (CanTakeDamage && ScreenPositionUtility.InScreen(transform.position, Vector2.one * 0.25f))
         {
             if (totalHealth < 0)
             {

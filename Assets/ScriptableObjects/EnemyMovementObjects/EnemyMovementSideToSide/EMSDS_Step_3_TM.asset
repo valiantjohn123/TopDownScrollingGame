@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f2183fa49afec4297a15603395d49b, type: 3}
   m_Name: EMSDS_Step_3_TM
   m_EditorClassIdentifier: 
-  NextNode: {fileID: 11400000}
+  NextNode: {fileID: 11400000, guid: 07d3c7fb028727349aceb7cc856d3176, type: 2}
   EasingCurve:
     serializedVersion: 2
     m_Curve:
