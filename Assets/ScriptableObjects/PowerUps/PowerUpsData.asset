@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PowerUpsList:
   - Type: 0
-    ChargeTime: 5
+    ChargeTime: 1
     ExpireTime: 4.5
   - Type: 1
     ChargeTime: 15
